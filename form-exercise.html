@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo de Formularios con JavaScript</title>
+</head>
+<body>
+    <form id="formulario">
+        Nombre: <input type="text" name="Nombre" value="Ami">
+        <br>
+        Apellido: <input type="text" name="Apellido" value="Lovelace">
+        <br>
+    </form>
+    <button onclick='mostrarValores()'>Mostrar</button> <!--asi se asigna una funcion en un evento (en este caso el evento es el onclick)-->
+    <div id="valores"></div>
+    <script>
+        function mostrarValores(){
+            let formulario = document.forms['formulario'];//le asignamos el id de formulario es el cual queremos acceder a tra vez de document.forms
+            let texto = '';//todo se va a ir concatenando en nuestra variable texto depsues de la iteracion
+            for (let elemento of formulario){
+                texto += elemento.value + '<br/>'//por cada elemento que recorramos en nuestro formulario accederemos a su valor (value)
+            }
+            document.getElementById('valores').innerHTML = texto;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Dom con JavaScript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="head">Ejemplo DOM con JavaScript</h1>
+    <h3 id="little head" class="azul">pequeño titulo</h3>
+    <p id="parrafo1" class="azul">Saludos!</p>
+    <p id="parrafo2" class="azul">you</p>
+    <p id="parrafo3" class="azul">little</p>
+    <p id="parrafo2" class="azul">bitch</p>
+
+<script>
+    let Elementos =document.querySelectorAll('p.azul');//ocupando el metodo "queryselectorall"estamos accediendo a todos los objetos "p" y clase 'azul'
+    console.log(`N° Elementos : ${Elementos.length}`);
+    //podemos iterar los documentos (en este caso los Elementos)
+    for(let Elemento of Elementos){//para iterar todos los elementos by class name .
+        console.log(`${Elemento.innerHTML}`);
+    }
+</script>
+</body>
+</html>

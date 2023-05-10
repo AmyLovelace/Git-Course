@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Dom con JavaScript</title>
+
+</head>
+<body>
+    <h1 id="head">Ejemplo DOM con JavaScript</h1>
+    <h3 id="little head">pequeño titulo</h3>
+    <p id="parrafo1">Saludos!</p>
+    <p id="parrafo2">you</p>
+    <p id="parrafo3">little</p>
+    <p id="parrafo2">bitch</p>
+
+<script>
+    let parrafos =document.getElementsByTagName('p');//ocupando el metodo "get element by tag name"estamos accediendo a todos los objetos "p"
+    console.log(`N° Parrafos: ${parrafos.length}`);
+    //podemos iterar los documentos (en este caso los parrafos)
+    for (let i = 0; i<parrafos.length; i++){
+        console.log(`i:${i} - ${parrafos[i].innerHTML}`);
+    }
+</script>
+</body>
+</html>

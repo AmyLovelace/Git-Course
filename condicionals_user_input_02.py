@@ -23,3 +23,16 @@ def validar_y_ejecutar():
   
 user_input=input("hola usuario, dame el numero de dias y los convertiré en horas\n")
 validar_y_ejecutar()
+def dias_a_segundos():
+    # Saludar al usuario y pedir el número de días
+    print("Hola usuario, dame el número de días y los convertiré en segundos:")
+    dias = int(input())
+
+    # Convertir días a segundos y mostrar el resultado
+    horas = dias * 24
+    minutos = horas * 60
+    segundos = minutos * 60
+    print(f"{dias} días son {segundos:,} segundos.")
+
+# Llamar a la función para que se ejecute
+dias_a_segundos()
